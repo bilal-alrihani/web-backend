@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +29,5 @@ Route::get('/articles/{id}', function ($id) use($list) {
         return $q['id'] == $id;
     });
 });
+Route::get('/user',[ArticleController::class,'index']);
+Route::get('/user/{id}',[ArticleController::class,'show']);
